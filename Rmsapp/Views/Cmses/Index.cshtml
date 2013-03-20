@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Rmsapp.Models.Cmse>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h5>CMS DATA</h5>
+
+        
+
+  <p>
+  <!--  @Html.ActionLink("Create New", "Create") -->
+    <input type="button" class="btn btn-primary pull-right" value="Create" onclick= "location.href = '@Url.Action("Create","Cmses")'" />
+   </p>
+<table class="table table-condensed">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PayDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoucherNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChequeNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VoucherNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChequeNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

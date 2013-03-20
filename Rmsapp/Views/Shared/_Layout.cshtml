@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Reconcillation Management System</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="Content/bootstrap-responsive.css" rel="stylesheet" />
+        <!--@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")-->
+        @Styles.Render("~/Content/bootstrap.css")
+    </head>
+    <body>
+        <header>
+            
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("ORB", "Index", "Home")</p>
+                </div>
+               
+                    <!--for twitter bootstrap-->
+           
+                     <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li>@Html.ActionLink("Home", "Index", "Home")</li>
+              <li>@Html.ActionLink("About", "About", "Home")</li>
+              <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li> @Html.Partial("_LoginPartial")</li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!--end-->                
+                        
+                
+         
+        </header>
+        <div class="container-fluid">  
+        
+           <!-- @RenderSection("featured", required: false)-->
+             &nbsp;
+           
+               <h1> @RenderBody() </h1>
+            
+        </div>
+            
+        <footer>
+            <div class="content-wrapper">
+                <div class="pull-right">
+                    <p>&copy; @DateTime.Now.Year - Designed and Developed by ORB Software and Systems ,Singapore</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

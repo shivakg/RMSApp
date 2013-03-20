@@ -1,0 +1,205 @@
+﻿@model Rmsapp.Models.Cmse
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+     @Html.HiddenFor(model => model.ID)
+
+    <table class="table table-bordered table-striped" style="background-color: #00ff90;"> 
+
+        <thead>
+    <tr>
+        <th>ID</th>
+    </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(model => model.VoucherNo) </td>
+                <td> @Html.EditorFor(model => model.VoucherNo) </td>   
+                <td>@Html.LabelFor(model => model.ChequeNo)</td>
+                <td>@Html.EditorFor(model => model.ChequeNo)</td>
+           </tr>
+            <tr>
+                <td>@Html.ValidationMessageFor(model => model.VoucherNo)</td>
+                <td>@Html.ValidationMessageFor(model => model.ChequeNo)</td>
+           </tr>
+        </tbody>
+    </table>    
+
+    <table class="table table-bordered table-striped" style="background-color: #00ff90;">
+    <thead>
+    <tr>
+        <th>Account Information</th>
+    </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(model => model.AccountNo) </td>
+                <td> @Html.EditorFor(model => model.AccountNo) </td>   
+                <td>@Html.LabelFor(model => model.AccountName)</td>
+                <td>@Html.EditorFor(model => model.AccountName)</td>
+           </tr>
+            <tr>
+                <td>@Html.ValidationMessageFor(model => model.AccountNo)</td>
+                <td>@Html.ValidationMessageFor(model => model.AccountName)</td>
+           </tr>
+        </tbody>
+    </table>
+        
+        <table class="table table-bordered table-striped" style="background-color: #00ff90;">
+    <thead>
+    <tr>
+        <th>Customer Information</th>
+    </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(model => model.CustomerNo) </td>
+                <td> @Html.EditorFor(model => model.CustomerNo) </td>   
+                <td>@Html.LabelFor(model => model.CustomerType)</td>
+                <td>@Html.EditorFor(model => model.CustomerType)</td>
+           </tr>
+            <tr>
+                <td>@Html.ValidationMessageFor(model => model.CustomerNo)</td>
+                <td>@Html.ValidationMessageFor(model => model.CustomerType)</td>
+           </tr>
+        </tbody>
+    </table>
+        
+         <table class="table table-bordered table-striped" style="background-color: #00ff90;">
+    <thead>
+    <tr>
+        <th>Payment</th>
+    </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(model => model.PayDate) </td>
+                <td> @Html.EditorFor(model => model.PayDate) </td>   
+                <td>@Html.LabelFor(model => model.PayMode)</td>
+                <td>@Html.EditorFor(model => model.PayMode)</td>
+                <td>@Html.LabelFor(model => model.PayAmount)</td>
+                <td>@Html.EditorFor(model => model.PayAmount)</td>
+           </tr>
+            <tr>
+                <td>@Html.ValidationMessageFor(model => model.PayDate)</td>
+                <td>@Html.ValidationMessageFor(model => model.PayMode)</td>
+                <td>@Html.ValidationMessageFor(model => model.PayAmount)</td>
+           </tr>
+        </tbody>
+    </table>
+    
+     <div>
+            <input class="btn btn-primary" type="submit" value="Save" />
+            <input type="button" class="btn btn-success" value="Back to list" onclick= "location.href = '@Url.Action("Index","Cmses")'" />
+    </div>
+    
+    
+    
+    
+    
+
+    <!--<fieldset>
+        <legend>Cmse</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PayDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PayDate)
+            @Html.ValidationMessageFor(model => model.PayDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VoucherNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VoucherNo)
+            @Html.ValidationMessageFor(model => model.VoucherNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ChequeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ChequeNo)
+            @Html.ValidationMessageFor(model => model.ChequeNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CustomerNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CustomerNo)
+            @Html.ValidationMessageFor(model => model.CustomerNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CustomerType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CustomerType)
+            @Html.ValidationMessageFor(model => model.CustomerType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AccountNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AccountNo)
+            @Html.ValidationMessageFor(model => model.AccountNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AccountName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AccountName)
+            @Html.ValidationMessageFor(model => model.AccountName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PayMode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PayMode)
+            @Html.ValidationMessageFor(model => model.PayMode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PayAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PayAmount)
+            @Html.ValidationMessageFor(model => model.PayAmount)
+        </div>
+
+     
+    
+
+
+
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset> -->
+}
+
+
+
+<!--<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>-->
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
