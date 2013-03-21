@@ -20,10 +20,10 @@
     </thead>
         <tbody>
             <tr>
-                <td>@Html.LabelFor(model => model.VoucherNo) </td>
-                <td> @Html.EditorFor(model => model.VoucherNo) </td>   
-                <td>@Html.LabelFor(model => model.ChequeNo)</td>
-                <td>@Html.EditorFor(model => model.ChequeNo)</td>
+                <td>@Html.DisplayNameFor(model => model.VoucherNo) </td>
+                <td> @Html.DisplayFor(model => model.VoucherNo) </td>   
+                <td>@Html.DisplayNameFor(model => model.ChequeNo)</td>
+                <td>@Html.DisplayFor(model => model.ChequeNo)</td>
            </tr>
             <tr>
                 <td>@Html.ValidationMessageFor(model => model.VoucherNo)</td>
@@ -40,10 +40,10 @@
     </thead>
         <tbody>
             <tr>
-                <td>@Html.LabelFor(model => model.AccountNo) </td>
-                <td> @Html.EditorFor(model => model.AccountNo) </td>   
-                <td>@Html.LabelFor(model => model.AccountName)</td>
-                <td>@Html.EditorFor(model => model.AccountName)</td>
+                <td>@Html.DisplayNameFor(model => model.AccountNo) </td>
+                <td> @Html.DisplayFor(model => model.AccountNo) </td>   
+                <td>@Html.DisplayNameFor(model => model.AccountName)</td>
+                <td>@Html.DisplayFor(model => model.AccountName)</td>
            </tr>
             <tr>
                 <td>@Html.ValidationMessageFor(model => model.AccountNo)</td>
@@ -60,10 +60,10 @@
     </thead>
         <tbody>
             <tr>
-                <td>@Html.LabelFor(model => model.CustomerNo) </td>
-                <td> @Html.EditorFor(model => model.CustomerNo) </td>   
-                <td>@Html.LabelFor(model => model.CustomerType)</td>
-                <td>@Html.EditorFor(model => model.CustomerType)</td>
+                <td>@Html.DisplayNameFor(model => model.CustomerNo) </td>
+                <td> @Html.DisplayFor(model => model.CustomerNo) </td>   
+                <td>@Html.DisplayNameFor(model => model.CustomerType)</td>
+                <td>@Html.DisplayFor(model => model.CustomerType)</td>
            </tr>
             <tr>
                 <td>@Html.ValidationMessageFor(model => model.CustomerNo)</td>
@@ -80,12 +80,12 @@
     </thead>
         <tbody>
             <tr>
-                <td>@Html.LabelFor(model => model.PayDate) </td>
-                <td> @Html.EditorFor(model => model.PayDate) </td>   
-                <td>@Html.LabelFor(model => model.PayMode)</td>
-                <td>@Html.EditorFor(model => model.PayMode)</td>
-                <td>@Html.LabelFor(model => model.PayAmount)</td>
-                <td>@Html.EditorFor(model => model.PayAmount)</td>
+                <td>@Html.DisplayNameFor(model => model.PayDate) </td>
+                <td> @Html.DisplayFor(model => model.PayDate) </td>   
+                <td>@Html.DisplayNameFor(model => model.PayMode)</td>
+                <td>@Html.DisplayFor(model => model.PayMode)</td>
+                <td>@Html.DisplayNameFor(model => model.PayAmount)</td>
+                <td>@Html.DisplayFor(model => model.PayAmount)</td>
            </tr>
             <tr>
                 <td>@Html.ValidationMessageFor(model => model.PayDate)</td>
@@ -96,10 +96,10 @@
     </table>
     
      <div>
-            <input class="btn btn-primary" type="submit" value="Save" />
-            <input type="button" class="btn btn-success" value="Back to list" onclick= "location.href = '@Url.Action("Index","Cmses")'" />
+          <!--  <input class="btn btn-primary" type="submit" value="Save" /> -->
+           <input type="button" class="btn btn-success" value="Back to list" onclick= "location.href = '@Url.Action("Index","Cmses")'" />
     </div>
-    <h5>Details</h5>
+   <!-- <h5>Details</h5> -->
 
 
 
@@ -169,9 +169,9 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.PayAmount)
     </div>
-</fieldset>-->
+</fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p> -->
 }
