@@ -6,6 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using Rmsapp.Models;
+using Rmsapp.DAL;
 
 namespace Rmsapp
 {
@@ -23,6 +26,7 @@ namespace Rmsapp
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+            Database.SetInitializer<CmseDBContext>(new CmseInitializer());
         }
     }
 }

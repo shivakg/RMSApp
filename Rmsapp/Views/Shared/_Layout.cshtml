@@ -12,18 +12,22 @@
         @Styles.Render("~/Content/bootstrap-responsive.min.css")
         @Styles.Render("~/Content/bootstrap.css")
         @Styles.Render("~/Content/bootstrap.min.css")
+       
+       <!-- @Styles.Render("~/Content/Site.css") -->
+
+        
 
     </head>
     <body>
         <header>
             
-                <div class="float-left">
+              <!--  <div class="float-left">
                     <p class="site-title">@Html.ActionLink("ORB", "Index", "Home")</p>
-                </div>
+                </div> -->
                
                     <!--for twitter bootstrap-->
            
-                     <div class="navbar navbar-fixed-top">
+     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -37,33 +41,40 @@
               <li>@Html.ActionLink("Home", "Index", "Home")</li>
               <li>@Html.ActionLink("About", "About", "Home")</li>
               <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                <li> @Html.Partial("_LoginPartial")</li>
+              <li> @Html.Partial("_LoginPartial")</li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-    <!--end-->                
-                        
-                
-         
-        </header>
-        <div class="container-fluid">  
+    <!--end-->  
+    </header>
+   
+   <div></div>
+
+   <div class="container-fluid">  
         
-           <!-- @RenderSection("featured", required: false)-->
-             &nbsp;
+           <!-- @RenderSection("featured", required: false) -->
+            
+            <div>
            
-               <h1> @RenderBody() </h1>
+                @RenderBody()
+               </div>
             
         </div>
-            
-        <footer>
-            <div class="content-wrapper">
-                <div class="pull-right">
-                    <p>&copy; @DateTime.Now.Year - Designed and Developed by ORB Software and Systems ,Singapore</p>
-                </div>
-            </div>
+
+ 
+       <footer>
+      <div id="footer">
+      <div class="container">
+      <div class ="pull-right">
+        <p class="muted credit"> 
+        &copy; @DateTime.Now.Year - Designed and Developed by ORB Software and Systems ,Singapore
+        </p>
+        </div>
+      </div>
+    </div>
         </footer>
 
         @Scripts.Render("~/bundles/jquery")

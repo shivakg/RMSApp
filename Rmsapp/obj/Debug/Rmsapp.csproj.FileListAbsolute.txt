@@ -59,6 +59,7 @@ C:\RMSApp\Rmsapp\bin\EntityFramework.dll
 C:\RMSApp\Rmsapp\bin\Microsoft.Web.Infrastructure.dll
 C:\RMSApp\Rmsapp\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\RMSApp\Rmsapp\bin\Newtonsoft.Json.dll
+C:\RMSApp\Rmsapp\bin\PagedList.dll
 C:\RMSApp\Rmsapp\bin\System.Net.Http.dll
 C:\RMSApp\Rmsapp\bin\System.Net.Http.Formatting.dll
 C:\RMSApp\Rmsapp\bin\System.Net.Http.WebRequest.dll
@@ -75,6 +76,7 @@ C:\RMSApp\Rmsapp\bin\WebGrease.dll
 C:\RMSApp\Rmsapp\bin\WebMatrix.Data.dll
 C:\RMSApp\Rmsapp\bin\WebMatrix.WebData.dll
 C:\RMSApp\Rmsapp\bin\EntityFramework.xml
+C:\RMSApp\Rmsapp\bin\PagedList.xml
 C:\RMSApp\Rmsapp\bin\Newtonsoft.Json.xml
 C:\RMSApp\Rmsapp\bin\System.Net.Http.xml
 C:\RMSApp\Rmsapp\bin\System.Net.Http.Formatting.xml

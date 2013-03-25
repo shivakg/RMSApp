@@ -13,7 +13,7 @@ namespace Rmsapp.Models
             get;
             set;
         }
-
+         
         public DateTime PayDate
         {
             get;
@@ -62,8 +62,5 @@ namespace Rmsapp.Models
 
 
     }
-    public class CmseDBContext : DbContext
-    {
-        public DbSet<Cmse> Cmses { get; set; }
-    }
+   
 }

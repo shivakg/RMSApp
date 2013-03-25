@@ -1,0 +1,17 @@
+# git ignore file
+bin/
+obj/
+#packages/
+*.suo
+*.user
+*cache
+_ReSharper*
+
+*NSubstitute*
+
+*.ncrunchproject
+*.ncrunchsolution
+
+UpgradeLog.XML
+_UpgradeReport_Files
+Backup
